@@ -26,7 +26,7 @@ const char* mqtt_password = "Metju123";
 // Definície pre piny plynového senzora MQ135
 #define GAS_SENSOR_ANALOG_PIN A0
 // Hodnota RZero pre plynový senzor MQ135, potrebné vložit správne nakalibrovanú hodnotu
-#define RZERO 160
+#define RZERO 155
 
 // Percentuálne makrá pre prácu s meniacimi sa nameranými hodnotami
 #define EXTRA_SMALL_PERCENTAGE_CHANGE 2.0
@@ -210,7 +210,7 @@ int measureGasSensor() {
   return ppm;
 }
 
-// Funckia pre posielanie dát senzorov HY-SRF05 a MQ135
+// Funckia pre posielanie dát senzora MQ135
 void sendSensorData(int value, const char* sensorType, float& formerValue) {
   // Vytvorenie HTTP klienta pomocou inštancie triedy WiFiClient
   WiFiClient http_client;
